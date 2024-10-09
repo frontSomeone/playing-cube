@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Cube from "./component/playingCube";
 
 function App() {
+  const [pos, setPos] = useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Cube
+    images = {[
+      "./images/1.png",
+      "./images/2.png",
+      "./images/3.png",
+      "./images/4.png",
+      "./images/5.png",
+      "./images/6.png",
+    ]}
+    pos = {pos}
+
+    randomNum={() => {
+    let min = Math.ceil(0);
+    let max = Math.floor(5);
+    let value = Math.floor(Math.random() * (max - min + 1) + min);
+    setPos(value);
+    }}/>
+    
   );
 }
 

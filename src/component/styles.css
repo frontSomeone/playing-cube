@@ -1,0 +1,17 @@
+.divBlock {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.photoCube {
+    width: 250px;
+    margin-bottom: 100px;
+}
+.btn {
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: aquamarine;
+}
